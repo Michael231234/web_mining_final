@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Please Logon</h2>
+    <form action='{{ url_for('.redirect_to_new_url') }}' method="POST">
+        <table>
+            <tr>
+                <td>Email：</td>
+                <td><input type="text" name='username' placeholder="Username" value=""></td>
+            </tr>
+            <tr>
+                <td>Password：</td>
+                <td><input type="password" name='password' placeholder="Password" value=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

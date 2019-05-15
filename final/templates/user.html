@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommend</title>
+            <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Recommend movies list</h1>
+<div class="container-fluid">
+    {% for r in movies %}
+            <div id={{r['title']}} class="row-fluid">
+                <div class="span12">
+                    <p><h1><a href={{r['movie_url']}}>{{ r['title'] }}</a></h1></p>
+            <p>Directors: {{ r['directors'] }}</p>
+            <p>Genres: {{ r['genres'] }}</p>
+            <p>Languages: {{ r['languages'] }}</p>
+            <p>Stars: {{ r['stars'] }}</p>
+            <p>Story Lines: {{ r['storyLines'] }}</p>
+            <p>Time: {{ r['time'] }}</p>
+            <p>Year: {{ r['year'] }}</p>
+            </div>
+            </div>
+    {% endfor %}
+    <a href="/">
+        <button>Other search</button>
+    </a>
+               </div>
+        <a href="/">
+            <button>Home</button>
+        </a>
+ <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
